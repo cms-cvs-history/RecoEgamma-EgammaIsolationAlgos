@@ -1,0 +1,19 @@
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoFromDepsModules.cff"
+
+sequence eleIsoFromDeposits = {
+    eleIsoFromDepsTk,
+    eleIsoFromDepsEcalFromHitsBarrel,
+    eleIsoFromDepsEcalFromHitsEndcap,
+    eleIsoFromDepsHcalFromHits
+}
+
+sequence eleIsoFromDeposits_all = {
+    eleIsoFromDepsTk,
+    eleIsoFromDepsEcalSCVetoFromClusts,
+    eleIsoFromDepsEcalFromClustsBarrel,
+    eleIsoFromDepsEcalFromClustsEndcap,
+    eleIsoFromDepsEcalFromHitsBarrel,
+    eleIsoFromDepsEcalFromHitsEndcap,
+    eleIsoFromDepsHcalFromHits,
+    eleIsoFromDepsHcalFromTowers
+}

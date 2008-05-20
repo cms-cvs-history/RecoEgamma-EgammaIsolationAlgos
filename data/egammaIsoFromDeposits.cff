@@ -1,0 +1,33 @@
+include "RecoEgamma/EgammaIsolationAlgos/data/gamIsoFromDepsModules.cff"
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoFromDepsModules.cff"
+
+sequence egammaIsoFromDeposits = {
+    gamIsoFromDepsTk,
+    gamIsoFromDepsEcalFromHitsBarrel,
+    gamIsoFromDepsEcalFromHitsEndcap,
+    gamIsoFromDepsHcalFromHits,
+    eleIsoFromDepsTk,
+    eleIsoFromDepsEcalFromHitsBarrel,
+    eleIsoFromDepsEcalFromHitsEndcap,
+    eleIsoFromDepsHcalFromHits
+}
+
+sequence egammaIsoFromDeposits_all = {
+    gamIsoFromDepsTk,
+    gamIsoFromDepsEcalSCVetoFromClusts,
+    gamIsoFromDepsEcalFromClustsBarrel,
+    gamIsoFromDepsEcalFromClustsEndcap,
+    gamIsoFromDepsEcalFromHitsBarrel,
+    gamIsoFromDepsEcalFromHitsEndcap,
+    gamIsoFromDepsHcalFromHits,
+    gamIsoFromDepsHcalFromTowers,
+    eleIsoFromDepsTk,
+    eleIsoFromDepsEcalSCVetoFromClusts,
+    eleIsoFromDepsEcalFromClustsBarrel,
+    eleIsoFromDepsEcalFromClustsEndcap,
+    eleIsoFromDepsEcalFromHitsBarrel,
+    eleIsoFromDepsEcalFromHitsEndcap,
+    eleIsoFromDepsHcalFromHits,
+    eleIsoFromDepsHcalFromTowers
+}
+

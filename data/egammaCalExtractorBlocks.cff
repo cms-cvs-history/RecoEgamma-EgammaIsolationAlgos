@@ -28,6 +28,7 @@ block EgammaIsoEcalFromHitsExtractorBlock = {
 	double extRadius = 0.6
 	double intRadius = 0.0
 	double etMin = -999
+	double energyMin = -999
 	bool subtractSuperClusterEnergy = false
 	bool tryBoth = true
 }

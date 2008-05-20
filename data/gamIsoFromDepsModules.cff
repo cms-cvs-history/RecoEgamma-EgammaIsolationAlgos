@@ -1,0 +1,92 @@
+
+module gamIsoFromDepsTk = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositTk
+        string weight = "1"
+        double deltaR = 0.3
+        vstring vetos = {"0.015",            # Inner DR Veto
+                         "Threshold(1.0)"}   # Minimum Tk Pt
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsEcalSCVetoFromClusts = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositEcalSCVetoFromClusts
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {} #no veto, already done with SC
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsEcalFromClustsBarrel = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositEcalFromClusts
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.045"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsEcalFromClustsEndcap = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositEcalFromClusts
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.070"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsEcalFromHitsBarrel = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositEcalFromHits
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.045"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsEcalFromHitsEndcap = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositEcalFromHits
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.070"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsHcalFromHits = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositHcalFromHits
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.0"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+module gamIsoFromDepsHcalFromTowers = CandIsolatorFromDeposits {
+    VPSet deposits = {{
+        string mode  = "sum"
+        InputTag src = gamIsoDepositHcalFromTowers
+        string weight = "1"
+        double deltaR = 0.4
+        vstring vetos = {"0.00"}
+        bool skipDefaultVeto = true
+    }}
+}
+
+
+
