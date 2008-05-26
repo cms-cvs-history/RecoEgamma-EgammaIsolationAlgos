@@ -5,8 +5,8 @@ block EgammaIsoTrackExtractorBlock = {
 	untracked string DepositLabel = ""
 	double Diff_r = 0.1
 	double Diff_z = 0.2
-	double DR_Max = 0.4
-	double DR_Veto = 0.00
+	double DR_Max = 3.0
+	double DR_Veto = 0.015
 
 	string BeamlineOption = "BeamSpotFromEvent"
 	InputTag BeamSpotLabel = offlineBeamSpot
