@@ -48,7 +48,6 @@ namespace egammaisolation {
                   const CaloRecHitMetaCollectionV &hits) const;
 
          double etMin_ ;
-         double energyMin_ ;
          double extRadius_ ;
          double intRadius_ ;
          edm::InputTag barrelRecHitsTag_;
