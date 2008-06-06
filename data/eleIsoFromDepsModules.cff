@@ -53,7 +53,8 @@ module eleIsoFromDepsEcalFromHitsBarrel = CandIsolatorFromDeposits {
         string weight = "1"
         double deltaR = 0.4
         vstring vetos = {"0.045",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)"}    # Jurassic Inner Strip
+                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
+                         "Threshold(0.080)"}                              # 2sigma Barrel
         bool skipDefaultVeto = true
     }}
 }
@@ -65,7 +66,8 @@ module eleIsoFromDepsEcalFromHitsEndcap = CandIsolatorFromDeposits {
         string weight = "1"
         double deltaR = 0.4
         vstring vetos = {"0.070",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)"}    # Jurassic Inner Strip
+                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
+                         "Threshold(0.30)"}                               # 2sigma Endcap
         bool skipDefaultVeto = true
     }}
 }

@@ -12,22 +12,3 @@ sequence egammaIsoFromDeposits = {
     eleIsoFromDepsHcalFromHits
 }
 
-sequence egammaIsoFromDeposits_all = {
-    gamIsoFromDepsTk,
-    gamIsoFromDepsEcalSCVetoFromClusts,
-    gamIsoFromDepsEcalFromClustsBarrel,
-    gamIsoFromDepsEcalFromClustsEndcap,
-    gamIsoFromDepsEcalFromHitsBarrel,
-    gamIsoFromDepsEcalFromHitsEndcap,
-    gamIsoFromDepsHcalFromHits,
-    gamIsoFromDepsHcalFromTowers,
-    eleIsoFromDepsTk,
-    eleIsoFromDepsEcalSCVetoFromClusts,
-    eleIsoFromDepsEcalFromClustsBarrel,
-    eleIsoFromDepsEcalFromClustsEndcap,
-    eleIsoFromDepsEcalFromHitsBarrel,
-    eleIsoFromDepsEcalFromHitsEndcap,
-    eleIsoFromDepsHcalFromHits,
-    eleIsoFromDepsHcalFromTowers
-}
-

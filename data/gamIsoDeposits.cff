@@ -1,28 +1,10 @@
 include "RecoEgamma/EgammaIsolationAlgos/data/egammaTrackExtractorBlocks.cff"
 include "RecoEgamma/EgammaIsolationAlgos/data/egammaCalExtractorBlocks.cff"
 
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaBasicClusterMerger.cfi"
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaSuperClusterMerger.cfi"
-
 include "RecoEgamma/EgammaIsolationAlgos/data/gamIsoModules.cff"
 
 sequence gamIsoDeposits = {
-	egammaSuperClusterMerger,
-    egammaBasicClusterMerger,
 	gamIsoDepositTk,
     gamIsoDepositEcalFromHits,
     gamIsoDepositHcalFromHits 
 }
-
-sequence gamIsoDeposits_all = {
-	egammaSuperClusterMerger,
-    egammaBasicClusterMerger,
-	gamIsoDepositTk,
-    gamIsoDepositEcalSCVetoFromClusts,
-    gamIsoDepositEcalFromClusts, 
-	gamIsoDepositEcalFromHits,
-    gamIsoDepositHcalFromHits,
-    gamIsoDepositHcalFromTowers 
-}
-
-

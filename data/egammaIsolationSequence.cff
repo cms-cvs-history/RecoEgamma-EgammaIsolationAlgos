@@ -1,0 +1,4 @@
+include "RecoEgamma/EgammaIsolationAlgos/data/egammaIsoDeposits.cff"
+include "RecoEgamma/EgammaIsolationAlgos/data/egammaIsoFromDeposits.cff"
+
+sequence egammaIsolationSequence = { egammaIsoDeposits, egammaIsoFromDeposits }

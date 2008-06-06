@@ -28,7 +28,8 @@ module gamIsoFromDepsEcalFromClustsBarrel = CandIsolatorFromDeposits {
         InputTag src = gamIsoDepositEcalFromClusts
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.045"}
+        vstring vetos = {"0.045",                                         # Jurassic Inner Cone
+                         "RectangularEtaPhiVeto(-0.01,0.01,-0.5,0.5)"}    # Jurassic Inner Strip
         bool skipDefaultVeto = true
     }}
 }
@@ -39,7 +40,8 @@ module gamIsoFromDepsEcalFromClustsEndcap = CandIsolatorFromDeposits {
         InputTag src = gamIsoDepositEcalFromClusts
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.070"}
+        vstring vetos = {"0.070",                                         # Jurassic Inner Cone
+                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)"}    # Jurassic Inner Strip
         bool skipDefaultVeto = true
     }}
 }
@@ -50,7 +52,9 @@ module gamIsoFromDepsEcalFromHitsBarrel = CandIsolatorFromDeposits {
         InputTag src = gamIsoDepositEcalFromHits
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.045"}
+        vstring vetos = {"0.045",                                         # Jurassic Inner Cone
+                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
+                         "Threshold(0.080)"}                              # 2sigma Barrel
         bool skipDefaultVeto = true
     }}
 }
@@ -61,7 +65,9 @@ module gamIsoFromDepsEcalFromHitsEndcap = CandIsolatorFromDeposits {
         InputTag src = gamIsoDepositEcalFromHits
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.070"}
+        vstring vetos = {"0.070",                                         # Jurassic Inner Cone
+                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
+                         "Threshold(0.30)"}                               # 2sigma Endcap
         bool skipDefaultVeto = true
     }}
 }

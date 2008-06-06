@@ -7,13 +7,3 @@ sequence gamIsoFromDeposits = {
     gamIsoFromDepsHcalFromHits
 }
 
-sequence gamIsoFromDeposits_all = {
-    gamIsoFromDepsTk,
-    gamIsoFromDepsEcalSCVetoFromClusts,
-    gamIsoFromDepsEcalFromClustsBarrel,
-    gamIsoFromDepsEcalFromClustsEndcap,
-    gamIsoFromDepsEcalFromHitsBarrel,
-    gamIsoFromDepsEcalFromHitsEndcap,
-    gamIsoFromDepsHcalFromHits,
-    gamIsoFromDepsHcalFromTowers
-}
