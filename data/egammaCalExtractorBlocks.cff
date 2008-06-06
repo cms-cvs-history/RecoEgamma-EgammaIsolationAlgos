@@ -1,52 +1,52 @@
 block EgammaIsoEcalSCVetoFromClustsExtractorBlock = {
-	string ComponentName = "EgammaEcalExtractor"
-	untracked string DepositLabel = ""
-	InputTag basicClusters = egammaBasicClusterMerger
-	InputTag superClusters = egammaSuperClusterMerger
-	double extRadius = 0.6
-	double etMin = -999
-	bool superClusterMatch = true
+    string ComponentName = "EgammaEcalExtractor"
+    untracked string DepositLabel = ""
+    InputTag basicClusters = egammaBasicClusterMerger
+    InputTag superClusters = egammaSuperClusterMerger
+    double extRadius = 0.6
+    double etMin = -999
+    bool superClusterMatch = true
 }
 
 block EgammaIsoEcalFromClustsExtractorBlock = {
-	string ComponentName = "EgammaEcalExtractor"
-	untracked string DepositLabel = ""
-	InputTag basicClusters = egammaBasicClusterMerger
-	InputTag superClusters = egammaSuperClusterMerger
-	double extRadius = 0.6
-	double etMin = -999
-	bool superClusterMatch = false
+    string ComponentName = "EgammaEcalExtractor"
+    untracked string DepositLabel = ""
+    InputTag basicClusters = egammaBasicClusterMerger
+    InputTag superClusters = egammaSuperClusterMerger
+    double extRadius = 0.6
+    double etMin = -999
+    bool superClusterMatch = false
 }
 
 block EgammaIsoEcalFromHitsExtractorBlock = {
-	string ComponentName = "EgammaRecHitExtractor"
-	untracked string DepositLabel = ""
-	InputTag barrelRecHits = ecalRecHit:EcalRecHitsEB
-	InputTag endcapRecHits = ecalRecHit:EcalRecHitsEE
-	string isolationVariable = "et"
-	string detector = "Ecal"
-	double extRadius = 0.6
-	double intRadius = 0.0
-	double etMin = -999
-	double energyMin = 0.08
-	bool subtractSuperClusterEnergy = false
-	bool tryBoth = true
+    string ComponentName = "EgammaRecHitExtractor"
+    untracked string DepositLabel = ""
+    InputTag barrelRecHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapRecHits = ecalRecHit:EcalRecHitsEE
+    string isolationVariable = "et"
+    string detector = "Ecal"
+    double extRadius = 0.6
+    double intRadius = 0.0
+    double etMin = -999
+    double energyMin = 0.08
+    bool subtractSuperClusterEnergy = false
+    bool tryBoth = true
 }
 
 block EgammaIsoHcalFromHitsExtractorBlock = {
-	string ComponentName = "EgammaHcalExtractor"
-	untracked string DepositLabel = ""
-	InputTag hcalRecHits = hbhereco
-	double extRadius = 0.6
-	double intRadius = 0.0
-	double etMin = -999
+    string ComponentName = "EgammaHcalExtractor"
+    untracked string DepositLabel = ""
+    InputTag hcalRecHits = hbhereco
+    double extRadius = 0.6
+    double intRadius = 0.0
+    double etMin = -999
 }
 
 block EgammaIsoHcalFromTowersExtractorBlock = {
-	string ComponentName = "EgammaTowerExtractor"
-	untracked string DepositLabel = ""
-	InputTag caloTowers = towerMaker
-	double extRadius = 0.6
-	double intRadius = 0.0
-	double etMin = -999
+    string ComponentName = "EgammaTowerExtractor"
+    untracked string DepositLabel = ""
+    InputTag caloTowers = towerMaker
+    double extRadius = 0.6
+    double intRadius = 0.0
+    double etMin = -999
 }

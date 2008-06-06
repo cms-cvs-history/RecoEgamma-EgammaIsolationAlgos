@@ -1,43 +1,43 @@
 
 module eleIsoDepositTk = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoTrackExtractorBlock }
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoTrackExtractorBlock }
 }
 
 module eleIsoDepositEcalSCVetoFromClusts = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoEcalSCVetoFromClustsExtractorBlock}
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoEcalSCVetoFromClustsExtractorBlock}
 }
 
 module eleIsoDepositEcalFromClusts = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoEcalFromClustsExtractorBlock}
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoEcalFromClustsExtractorBlock}
 }
 
 module eleIsoDepositEcalFromHits = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoEcalFromHitsExtractorBlock}
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoEcalFromHitsExtractorBlock}
 }
 
 module eleIsoDepositHcalFromHits = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoHcalFromHitsExtractorBlock}
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoHcalFromHitsExtractorBlock}
 }
 
 module eleIsoDepositHcalFromTowers = CandIsoDepositProducer {
-	InputTag src = pixelMatchGsfElectrons
-	string trackType = "candidate"
-	bool MultipleDepositsFlag = false
-	PSet ExtractorPSet = { using EgammaIsoHcalFromTowersExtractorBlock}
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EgammaIsoHcalFromTowersExtractorBlock}
 }
 

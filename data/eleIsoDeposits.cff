@@ -4,7 +4,7 @@ include "RecoEgamma/EgammaIsolationAlgos/data/egammaCalExtractorBlocks.cff"
 include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoModules.cff"
 
 sequence eleIsoDeposits = {
-	eleIsoDepositTk,
+    eleIsoDepositTk,
     eleIsoDepositEcalFromHits,
     eleIsoDepositHcalFromHits 
 }
