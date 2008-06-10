@@ -22,52 +22,32 @@ module eleIsoFromDepsEcalSCVetoFromClusts = CandIsolatorFromDeposits {
     }}
 }
 
-module eleIsoFromDepsEcalFromClustsBarrel = CandIsolatorFromDeposits {
+module eleIsoFromDepsEcalFromClusts = CandIsolatorFromDeposits {
     VPSet deposits = {{
         string mode  = "sum"
         InputTag src = eleIsoDepositEcalFromClusts
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.045",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.01,0.01,-0.5,0.5)"}    # Jurassic Inner Strip
+        vstring vetos = {"EcalBarrel:0.045",                                          # Jurassic Inner Cone
+                         "EcalBarrel:RectangularEtaPhiVeto(-0.01,0.01,-0.5,0.5)",     # Jurassic Inner Strip
+                         "EcalEndcaps:0.070",                                         # Jurassic Inner Cone
+                         "EcalEndcaps:RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)"}    # Jurassic Inner Strip
         bool skipDefaultVeto = true
     }}
 }
 
-module eleIsoFromDepsEcalFromClustsEndcap = CandIsolatorFromDeposits {
-    VPSet deposits = {{
-        string mode  = "sum"
-        InputTag src = eleIsoDepositEcalFromClusts
-        string weight = "1"
-        double deltaR = 0.4
-        vstring vetos = {"0.070",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)"}    # Jurassic Inner Strip
-        bool skipDefaultVeto = true
-    }}
-}
-
-module eleIsoFromDepsEcalFromHitsBarrel = CandIsolatorFromDeposits {
+module eleIsoFromDepsEcalFromHits = CandIsolatorFromDeposits {
     VPSet deposits = {{
         string mode  = "sum"
         InputTag src = eleIsoDepositEcalFromHits
         string weight = "1"
         double deltaR = 0.4
-        vstring vetos = {"0.045",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
-                         "Threshold(0.080)"}                              # 2sigma Barrel
-        bool skipDefaultVeto = true
-    }}
-}
-
-module eleIsoFromDepsEcalFromHitsEndcap = CandIsolatorFromDeposits {
-    VPSet deposits = {{
-        string mode  = "sum"
-        InputTag src = eleIsoDepositEcalFromHits
-        string weight = "1"
-        double deltaR = 0.4
-        vstring vetos = {"0.070",                                         # Jurassic Inner Cone
-                         "RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
-                         "Threshold(0.30)"}                               # 2sigma Endcap
+        vstring vetos = {"EcalBarrel:0.045",                                          # Jurassic Inner Cone
+                         "EcalBarrel:RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",     # Jurassic Inner Strip
+                         "EcalBarrel:Threshold(0.080)",                               # 2sigma Barrel
+                         "EcalEndcaps:0.070",                                         # Jurassic Inner Cone
+                         "EcalEndcaps:RectangularEtaPhiVeto(-0.02,0.02,-0.5,0.5)",    # Jurassic Inner Strip
+                         "EcalEndcaps:Threshold(0.30)"}                               # 2sigma Endcap
         bool skipDefaultVeto = true
     }}
 }

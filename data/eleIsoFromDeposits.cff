@@ -2,8 +2,7 @@ include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoFromDepsModules.cff"
 
 sequence eleIsoFromDeposits = {
     eleIsoFromDepsTk,
-    eleIsoFromDepsEcalFromHitsBarrel,
-    eleIsoFromDepsEcalFromHitsEndcap,
+    eleIsoFromDepsEcalFromHits,
     eleIsoFromDepsHcalFromHits
 }
 
