@@ -25,21 +25,56 @@ block EgammaIsoEcalFromHitsExtractorBlock = {
     InputTag endcapRecHits = ecalRecHit:EcalRecHitsEE
     string isolationVariable = "et"
     string detector = "Ecal"
-    double extRadius = 0.6
+    double minCandEt = 10.
+    double extRadius = 0.5
     double intRadius = 0.0
+    double intStrip = 0.02
     double etMin = -999
     double energyMin = 0.08
     bool subtractSuperClusterEnergy = false
     bool tryBoth = true
+
+    #Following params are use to decide if candidate is isolated
+    InputTag barrelEcalHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapEcalHits = ecalRecHit:EcalRecHitsEE
+
+    double checkIsoExtRBarrel        = 0.4
+    double checkIsoInnRBarrel        = 0.045
+    double checkIsoEtaStripBarrel    = 0.02
+    double checkIsoEtRecHitBarrel    = 0.08
+    double checkIsoEtCutBarrel       = 12.
+
+    double checkIsoExtREndcap        = 0.4
+    double checkIsoInnREndcap        = 0.07
+    double checkIsoEtaStripEndcap    = 0.02
+    double checkIsoEtRecHitEndcap    = 0.30
+    double checkIsoEtCutEndcap       = 9.
 }
 
 block EgammaIsoHcalFromHitsExtractorBlock = {
     string ComponentName = "EgammaHcalExtractor"
     untracked string DepositLabel = ""
     InputTag hcalRecHits = hbhereco
-    double extRadius = 0.6
+    double minCandEt = 10.
+    double extRadius = 0.5
     double intRadius = 0.0
     double etMin = -999
+
+    #Following params are use to decide if candidate is isolated
+    InputTag barrelEcalHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapEcalHits = ecalRecHit:EcalRecHitsEE
+
+    double checkIsoExtRBarrel        = 0.4
+    double checkIsoInnRBarrel        = 0.045
+    double checkIsoEtaStripBarrel    = 0.02
+    double checkIsoEtRecHitBarrel    = 0.08
+    double checkIsoEtCutBarrel       = 12.
+
+    double checkIsoExtREndcap        = 0.4
+    double checkIsoInnREndcap        = 0.07
+    double checkIsoEtaStripEndcap    = 0.02
+    double checkIsoEtRecHitEndcap    = 0.30
+    double checkIsoEtCutEndcap       = 9.
 }
 
 block EgammaIsoHcalFromTowersExtractorBlock = {

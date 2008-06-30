@@ -1,8 +1,9 @@
 
 block EgammaIsoTrackExtractorBlock = {
-    string ComponentName = "TrackExtractor"
+    string ComponentName = "EgammaTrackExtractor"
     InputTag inputTrackCollection = generalTracks
     untracked string DepositLabel = ""
+    double minCandEt = 10.
     double Diff_r = 0.1
     double Diff_z = 0.2
     double DR_Max = 0.4
@@ -14,4 +15,21 @@ block EgammaIsoTrackExtractorBlock = {
     double Chi2Ndof_Max = 1E64
     double Chi2Prob_Min = -1
     double Pt_Min = -1
+
+    #Following params are use to decide if candidate is isolated
+    InputTag barrelEcalHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapEcalHits = ecalRecHit:EcalRecHitsEE
+
+    double checkIsoExtRBarrel        = 0.4
+    double checkIsoInnRBarrel        = 0.045
+    double checkIsoEtaStripBarrel    = 0.02
+    double checkIsoEtRecHitBarrel    = 0.08
+    double checkIsoEtCutBarrel       = 12.
+                                             
+    double checkIsoExtREndcap        = 0.4
+    double checkIsoInnREndcap        = 0.07
+    double checkIsoEtaStripEndcap    = 0.02
+    double checkIsoEtRecHitEndcap    = 0.30
+    double checkIsoEtCutEndcap       = 9.     
+
 }
