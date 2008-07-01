@@ -1,0 +1,10 @@
+
+
+include "RecoEgamma/EgammaIsolationAlgos/data/eleTrackExtractorBlocks.cff"
+
+module eleIsoDepositTk = CandIsoDepositProducer {
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EleIsoTrackExtractorBlock }
+}

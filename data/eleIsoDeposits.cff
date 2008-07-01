@@ -1,10 +1,13 @@
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaTrackExtractorBlocks.cff"
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaCalExtractorBlocks.cff"
 
-include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoModules.cff"
+
+include "RecoEgamma/EgammaIsolationAlgos/data/egammaIsoSetup.cff"
+
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoDepositTk.cff"
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoDepositEcalFromHits.cff"
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoDepositHcalFromHits.cff"
 
 sequence eleIsoDeposits = {
-    eleIsoDepositTk,
-    eleIsoDepositEcalFromHits,
-    eleIsoDepositHcalFromHits 
+    eleIsoDepositTk &
+    eleIsoDepositEcalFromHits &
+    eleIsoDepositHcalFromHits
 }

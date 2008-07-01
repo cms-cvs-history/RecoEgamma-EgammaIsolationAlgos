@@ -1,0 +1,10 @@
+
+
+include "RecoEgamma/EgammaIsolationAlgos/data/eleHcalExtractorBlocks.cff"
+
+module eleIsoDepositHcalFromHits = CandIsoDepositProducer {
+    InputTag src = pixelMatchGsfElectrons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using EleIsoHcalFromHitsExtractorBlock}
+}

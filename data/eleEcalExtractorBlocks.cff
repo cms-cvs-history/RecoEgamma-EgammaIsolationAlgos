@@ -1,0 +1,54 @@
+
+
+block EleIsoEcalFromHitsExtractorBlock = {
+    string ComponentName = "EgammaRecHitExtractor"
+    untracked string DepositLabel = ""
+    InputTag barrelRecHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapRecHits = ecalRecHit:EcalRecHitsEE
+    string isolationVariable = "et"
+    string detector = "Ecal"
+    double minCandEt = 0.
+    double extRadius = 0.5
+    double intRadius = 0.0
+    double intStrip = 0.0
+    double etMin = -999
+    double energyMin = 0.08
+    bool subtractSuperClusterEnergy = false
+    bool tryBoth = true
+
+    #Following params are use to decide if candidate is isolated
+    InputTag barrelEcalHits = ecalRecHit:EcalRecHitsEB
+    InputTag endcapEcalHits = ecalRecHit:EcalRecHitsEE
+
+    double checkIsoExtRBarrel        = 0.01
+    double checkIsoInnRBarrel        = 0.00
+    double checkIsoEtaStripBarrel    = 0.00
+    double checkIsoEtRecHitBarrel    = 0.08
+    double checkIsoEtCutBarrel       = 10000.
+
+    double checkIsoExtREndcap        = 0.01
+    double checkIsoInnREndcap        = 0.00
+    double checkIsoEtaStripEndcap    = 0.00
+    double checkIsoEtRecHitEndcap    = 0.30
+    double checkIsoEtCutEndcap       = 10000.
+}
+
+block EleIsoEcalSCVetoFromClustsExtractorBlock = {
+    string ComponentName = "EgammaEcalExtractor"
+    untracked string DepositLabel = ""
+    InputTag basicClusters = egammaBasicClusterMerger
+    InputTag superClusters = egammaSuperClusterMerger
+    double extRadius = 0.6
+    double etMin = -999
+    bool superClusterMatch = true
+}
+
+block EleIsoEcalFromClustsExtractorBlock = {
+    string ComponentName = "EgammaEcalExtractor"
+    untracked string DepositLabel = ""
+    InputTag basicClusters = egammaBasicClusterMerger
+    InputTag superClusters = egammaSuperClusterMerger
+    double extRadius = 0.6
+    double etMin = -999
+    bool superClusterMatch = false
+}

@@ -1,4 +1,8 @@
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaIsoDeposits.cff"
-include "RecoEgamma/EgammaIsolationAlgos/data/egammaIsoFromDeposits.cff"
 
-sequence egammaIsolationSequence = { egammaIsoDeposits, egammaIsoFromDeposits }
+
+include "RecoEgamma/EgammaIsolationAlgos/data/gamIsolationSequence.cff"
+include "RecoEgamma/EgammaIsolationAlgos/data/eleIsolationSequence.cff"
+
+#Standard reco sequence with both electrons and photons
+sequence egammaIsolationSequence = { eleIsolationSequence & gamIsolationSequence }
+

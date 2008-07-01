@@ -1,0 +1,10 @@
+
+
+include "RecoEgamma/EgammaIsolationAlgos/data/gamHcalExtractorBlocks.cff"
+
+module gamIsoDepositHcalFromHits = CandIsoDepositProducer {
+    InputTag src = photons
+    string trackType = "candidate"
+    bool MultipleDepositsFlag = false
+    PSet ExtractorPSet = { using GamIsoHcalFromHitsExtractorBlock}
+}

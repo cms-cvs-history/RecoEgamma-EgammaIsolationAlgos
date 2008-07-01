@@ -1,9 +1,10 @@
 
-block EgammaIsoTrackExtractorBlock = {
+
+block EleIsoTrackExtractorBlock = {
     string ComponentName = "EgammaTrackExtractor"
     InputTag inputTrackCollection = generalTracks
     untracked string DepositLabel = ""
-    double minCandEt = 10.
+    double minCandEt = 0.
     double Diff_r = 0.1
     double Diff_z = 0.2
     double DR_Max = 0.4
@@ -20,16 +21,16 @@ block EgammaIsoTrackExtractorBlock = {
     InputTag barrelEcalHits = ecalRecHit:EcalRecHitsEB
     InputTag endcapEcalHits = ecalRecHit:EcalRecHitsEE
 
-    double checkIsoExtRBarrel        = 0.4
-    double checkIsoInnRBarrel        = 0.045
-    double checkIsoEtaStripBarrel    = 0.02
+    double checkIsoExtRBarrel        = 0.01
+    double checkIsoInnRBarrel        = 0.00
+    double checkIsoEtaStripBarrel    = 0.00
     double checkIsoEtRecHitBarrel    = 0.08
-    double checkIsoEtCutBarrel       = 12.
+    double checkIsoEtCutBarrel       = 10000.
                                              
-    double checkIsoExtREndcap        = 0.4
-    double checkIsoInnREndcap        = 0.07
-    double checkIsoEtaStripEndcap    = 0.02
+    double checkIsoExtREndcap        = 0.01
+    double checkIsoInnREndcap        = 0.00
+    double checkIsoEtaStripEndcap    = 0.00
     double checkIsoEtRecHitEndcap    = 0.30
-    double checkIsoEtCutEndcap       = 9.     
+    double checkIsoEtCutEndcap       = 10000.
 
 }

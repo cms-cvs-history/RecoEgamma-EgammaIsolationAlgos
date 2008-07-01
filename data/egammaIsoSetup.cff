@@ -1,0 +1,5 @@
+
+
+include "Geometry/CMSCommonData/data/cmsIdealGeometryXML.cfi"
+include "RecoLocalCalo/Configuration/data/RecoLocalCalo.cff"
+
