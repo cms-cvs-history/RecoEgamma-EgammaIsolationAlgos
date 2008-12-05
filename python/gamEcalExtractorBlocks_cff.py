@@ -7,7 +7,7 @@ GamIsoEcalFromHitsExtractorBlock = cms.PSet(
     endcapRecHits = cms.InputTag("ecalRecHit","EcalRecHitsEE"),
     isolationVariable = cms.string('et'),
     detector = cms.string('Ecal'),
-    minCandEt = cms.double(15.),
+    minCandEt = cms.double(10.),
     extRadius = cms.double(0.5),
     intRadius = cms.double(0.0),
     intStrip = cms.double(0.0),
@@ -24,13 +24,13 @@ GamIsoEcalFromHitsExtractorBlock = cms.PSet(
     checkIsoInnRBarrel            = cms.double(0.045),
     checkIsoEtaStripBarrel        = cms.double(0.02),
     checkIsoEtRecHitBarrel        = cms.double(0.08),
-    checkIsoEtCutBarrel           = cms.double(8.),
+    checkIsoEtCutBarrel           = cms.double(10000.),
 
     checkIsoExtREndcap            = cms.double(0.4),
     checkIsoInnREndcap            = cms.double(0.07),
     checkIsoEtaStripEndcap        = cms.double(0.02),
     checkIsoEtRecHitEndcap        = cms.double(0.30),
-    checkIsoEtCutEndcap           = cms.double(7.)
+    checkIsoEtCutEndcap           = cms.double(10000.)
 )
 GamIsoEcalSCVetoFromClustsExtractorBlock = cms.PSet(
     ComponentName = cms.string('EgammaEcalExtractor'),
