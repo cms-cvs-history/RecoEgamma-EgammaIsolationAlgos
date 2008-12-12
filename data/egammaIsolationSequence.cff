@@ -1,8 +1,0 @@
-
-
-include "RecoEgamma/EgammaIsolationAlgos/data/gamIsolationSequence.cff"
-include "RecoEgamma/EgammaIsolationAlgos/data/eleIsolationSequence.cff"
-
-#Standard reco sequence with both electrons and photons
-sequence egammaIsolationSequence = { eleIsolationSequence & gamIsolationSequence }
-
