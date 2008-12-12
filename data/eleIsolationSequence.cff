@@ -1,8 +1,0 @@
-
-
-include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoDeposits.cff"
-include "RecoEgamma/EgammaIsolationAlgos/data/eleIsoFromDeposits.cff"
-
-#Standard reco sequence with electrons
-sequence eleIsolationSequence = { eleIsoDeposits & eleIsoFromDeposits }
-

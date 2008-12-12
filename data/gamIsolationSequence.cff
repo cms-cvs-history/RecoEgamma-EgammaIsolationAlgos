@@ -1,8 +1,0 @@
-
-
-include "RecoEgamma/EgammaIsolationAlgos/data/gamIsoDeposits.cff"
-include "RecoEgamma/EgammaIsolationAlgos/data/gamIsoFromDeposits.cff"
-
-#Standard reco sequence with photons
-sequence gamIsolationSequence = { gamIsoDeposits & gamIsoFromDeposits }
-
