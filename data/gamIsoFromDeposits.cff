@@ -1,8 +1,0 @@
-include "RecoEgamma/EgammaIsolationAlgos/data/gamIsoFromDepsModules.cff"
-
-sequence gamIsoFromDeposits = {
-    gamIsoFromDepsTk,
-    gamIsoFromDepsEcalFromHits,
-    gamIsoFromDepsHcalFromHits
-}
-
