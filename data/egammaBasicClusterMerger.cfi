@@ -1,3 +1,0 @@
-module egammaBasicClusterMerger = BasicClusterMerger {
-    VInputTag src = {islandBasicClusters:islandBarrelBasicClusters,islandBasicClusters:islandEndcapBasicClusters }
-}
