@@ -54,9 +54,10 @@ EgammaRecHitExtractor::EgammaRecHitExtractor(const edm::ParameterSet& par) :
     v_chstatus_(par.getParameter<std::vector<int> >("recHitFlagsToBeExcluded"))
 { 
 
-    if     ( !spIdString_.compare("kE1OverE9") )   spId_ = EcalSeverityLevelAlgo::kE1OverE9;
-    else if( !spIdString_.compare("kSwissCross") ) spId_ = EcalSeverityLevelAlgo::kSwissCross;
-    else                                           spId_ = EcalSeverityLevelAlgo::kSwissCross;
+    if     ( !spIdString_.compare("kE1OverE9") )                  spId_ = EcalSeverityLevelAlgo::kE1OverE9;
+    else if( !spIdString_.compare("kSwissCross") )                spId_ = EcalSeverityLevelAlgo::kSwissCross;
+    else if( !spIdString_.compare("kSwissCrossBordersIncluded") ) spId_ = EcalSeverityLevelAlgo::kSwissCrossBordersIncluded;
+    else                                                          spId_ = EcalSeverityLevelAlgo::kSwissCross;
 
     if ((intRadius_ != 0.0) && (fakeNegativeDeposit_)) {
         throw cms::Exception("Configuration Error") << "EgammaRecHitExtractor: " << 
@@ -183,6 +184,7 @@ void EgammaRecHitExtractor::collect(reco::IsoDeposit &deposit,
 
 
             if(barrel &&                                 //make sure we have a barrel rechit
+//             if(//j->id().subdetId() == 1 &&                //make sure we have a barrel rechit
                EcalSeverityLevelAlgo::severityLevel(     //call the severity level method
                    EBDetId(j->id()),                     //passing the EBDetId
                    hits,                                 //the rechit collection in order to calculate the swiss crss
